@@ -5,5 +5,3 @@ const assertEqual = function(actual, expected) {
     console.log(`❗Assertion Failed: ${actual} !== ${expected}❗`);
   }
 };
-
-assertEqual(3, 3);
