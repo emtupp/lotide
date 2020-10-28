@@ -6,8 +6,8 @@ const eqArrays = function(array1, array2) {
     }
   }
   if (trueCount === array2.length) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 };
