@@ -12,31 +12,22 @@ const eqArrays = function(array1, array2) {
   }
 };
 
-const assertArraysEqual = function(array1, array2){
-  if (eqArrays(array1, array2)){
+const assertArraysEqual = function(array1, array2) {
+  if (eqArrays(array1, array2)) {
     console.log('👌These two arrays are the same!👌');
   } else {
     console.log('❗These two arrays are different!❗');
   }
-}
+};
 
-const without = function(source, itemsToRemove){
-  let cleanedArray = source;
-  for (let i = 0; i < cleanedArray.length; i++){
-    for (let j = 0; j < itemsToRemove.length; j++){
-      if (cleanedArray[i] === itemsToRemove[j]){
+const without = function(source, itemsToRemove) {
+  let cleanedArray = [...source]; // <= I though that giving it an entirely new variable would do it, but it still changes 'source'
+  for (let i = 0; i < cleanedArray.length; i++) {
+    for (let j = 0; j < itemsToRemove.length; j++) {
+      if (cleanedArray[i] === itemsToRemove[j]) {
         cleanedArray.splice(i, 1);
       }
     }
   }
   console.log(cleanedArray);
-}
-
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
-
-const numbers = [1, 2, 3];
-
-console.log(numbers)
-without(numbers, [1]);
-console.log(numbers)
+};

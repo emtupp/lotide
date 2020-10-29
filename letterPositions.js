@@ -1,18 +1,16 @@
 const letterPositions = function(sentence) {
-
-  const results = {};
-
-  for (let i of sentence){
-    
-    if (!results[i]){
-      results[i] = [sentence.indexOf(i)];
-
+  let lowerSentence = sentence.toLowerCase();
+  let answer = {};
+  for (let i in lowerSentence) {
+    if (!answer[lowerSentence[i]]) {
+      if (lowerSentence[i] === ' ') {
+        continue;
+      } else {
+        answer[lowerSentence[i]] = [i];
+      }
     } else {
-      results[i].push(sentence.indexOf(i));
-
+      answer[lowerSentence[i]].push(i);
     }
   }
-  return results;
+  return answer;
 };
-
-console.log(letterPositions('hello'))
