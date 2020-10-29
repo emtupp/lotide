@@ -25,8 +25,8 @@ const eqObjects = function(object1, object2) {
     return false;
   } else {
     for (let keyName of Object.keys(object1)) {
-      if (Array.isArray(object1[keyName]) && Array.isArray(object2[keyName])){
-        eqArrays(object1[keyName], object2[keyName])
+      if (Array.isArray(object1[keyName]) && Array.isArray(object2[keyName])) {
+        return eqArrays(object1[keyName], object2[keyName]);
       } else if (object1[keyName] === object2[keyName]) {
         continue;
       } else {
@@ -37,11 +37,4 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
-console.log(eqObjects({a: [1, 2], b: 3, c: 4}, {a: [1, 2], b: 3, c: 4}))
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc)); // => true
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(eqObjects(cd, cd2)); // => false
+console.log(eqObjects({a: [1, 2], b: [], c: 4}, {a: [1, 2], b: 3, c: 4}))
