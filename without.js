@@ -9,3 +9,5 @@ const without = function(source, itemsToRemove) {
   }
   console.log(cleanedArray);
 };
+
+module.exports = without;

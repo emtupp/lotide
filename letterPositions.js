@@ -14,3 +14,5 @@ const letterPositions = function(sentence) {
   }
   return answer;
 };
+
+module.exports = letterPositions;

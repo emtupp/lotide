@@ -7,3 +7,5 @@ const findKeyByValue = function(objectList, keyValue) {
     }
   }
 };
+
+module.exports = findKeyByValue;

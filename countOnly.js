@@ -13,3 +13,5 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return answer;
 };
+
+module.exports = countOnly;

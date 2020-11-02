@@ -8,3 +8,5 @@ const assertObjectsEqual = function(actual, expected) {
     console.log(`❗These two objects (${inspect(actual)} & ${inspect(expected)}) are different!❗`);
   }
 };
+
+module.exports = assertObjectsEqual;

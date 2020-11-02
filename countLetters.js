@@ -13,3 +13,5 @@ const countLetters = function(sentence) {
   }
   return letterCounter;
 };
+
+module.exports = countLetters;
