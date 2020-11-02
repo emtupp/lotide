@@ -27,4 +27,6 @@ const eqObjects = function(object1, object2) {
 
 console.log(eqObjects({a: {a:1, b:2}, b: [3, 'dog'], c: 4}, {a: {a:1, b:2}, b: [3, 'dog'], c: 4}))
 
+module.exports = eqObjects;
+
 // could be improved by adding recursion if input is nested array
