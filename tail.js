@@ -1,11 +1,9 @@
-const tail = function(array2) {
+const tail = function(arr) {
   let newArray = [];
-  for (let i = 0; i < array2.length; i++) {
-    if (i === 0) {
-      continue;
-    } else {
-      newArray.push(array2[i]);
-    }
+  for (let i = 1; i < arr.length; i++) {
+    newArray.push(arr[i]);
   }
-  console.log(newArray);
+  return newArray;
 };
+
+module.exports = tail;
